@@ -7,6 +7,7 @@ import CommunityStats from './components/CommunityStats'
 import NotificationPanel from './components/NotificationPanel'
 import AIRecommendationPanel from './components/AIRecommendationPanel'
 import UploadStudio from './components/UploadStudio'
+import TrendingLeaderboard from './components/TrendingLeaderboard'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
       <NotificationPanel />
       <AIRecommendationPanel />
       <UploadStudio />
+      <TrendingLeaderboard />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
