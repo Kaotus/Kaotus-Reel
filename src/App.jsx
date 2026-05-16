@@ -11,6 +11,7 @@ import TrendingLeaderboard from './components/TrendingLeaderboard'
 import CommentThread from './components/CommentThread'
 import LiveChatWidget from './components/LiveChatWidget'
 import AuthPanel from './components/AuthPanel'
+import RealtimeFeedStatus from './components/RealtimeFeedStatus'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
       <CommentThread />
       <LiveChatWidget />
       <AuthPanel />
+      <RealtimeFeedStatus />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
