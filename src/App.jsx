@@ -10,6 +10,7 @@ import UploadStudio from './components/UploadStudio'
 import TrendingLeaderboard from './components/TrendingLeaderboard'
 import CommentThread from './components/CommentThread'
 import LiveChatWidget from './components/LiveChatWidget'
+import AuthPanel from './components/AuthPanel'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
       <TrendingLeaderboard />
       <CommentThread />
       <LiveChatWidget />
+      <AuthPanel />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
