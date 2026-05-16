@@ -5,6 +5,7 @@ import ProfileCard from './components/ProfileCard'
 import LiveFeedBadge from './components/LiveFeedBadge'
 import CommunityStats from './components/CommunityStats'
 import NotificationPanel from './components/NotificationPanel'
+import AIRecommendationPanel from './components/AIRecommendationPanel'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
       <LiveFeedBadge />
       <CommunityStats />
       <NotificationPanel />
+      <AIRecommendationPanel />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
