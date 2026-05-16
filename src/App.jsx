@@ -1,6 +1,7 @@
 import { Flame, Home, Compass, User } from 'lucide-react'
 import ReelCard from './components/ReelCard'
 import DiscoverPanel from './components/DiscoverPanel'
+import ProfileCard from './components/ProfileCard'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       </header>
 
       <DiscoverPanel />
+      <ProfileCard />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
