@@ -17,13 +17,33 @@ body {
   scroll-snap-type: y mandatory;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+}
+
+.logo {
+  color: #00ffe1;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.feedType {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
 .reel {
   height: 100vh;
   scroll-snap-align: start;
-  background: linear-gradient(180deg, #0a0a0a, #111827);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: radial-gradient(circle at top, #111827, #050505);
   position: relative;
 }
 
@@ -33,24 +53,33 @@ body {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  position: relative;
 }
 
-.topTag {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.videoGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,255,225,0.08), transparent 70%);
+}
+
+.content {
+  z-index: 2;
+  margin-bottom: 120px;
+  max-width: 80%;
+}
+
+.category {
+  display: inline-block;
+  margin-bottom: 12px;
   color: #00ffe1;
   font-size: 14px;
 }
 
-.content {
-  margin-bottom: 100px;
-}
-
-.icon {
-  margin-bottom: 20px;
-  color: #00ffe1;
+.creator {
+  display: block;
+  margin-top: 18px;
+  color: #9ca3af;
 }
 
 h1 {
@@ -60,16 +89,42 @@ h1 {
 
 p {
   color: #d1d5db;
-  margin-bottom: 24px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-button {
-  background: #00ffe1;
-  color: black;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-weight: bold;
-  font-size: 16px;
+.actions {
+  position: absolute;
+  right: 18px;
+  bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 5;
+}
+
+.actions button {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 18px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(20px);
+  z-index: 50;
+}
+
+.bottomNav svg {
+  color: white;
 }
