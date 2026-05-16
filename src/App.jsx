@@ -12,6 +12,7 @@ import CommentThread from './components/CommentThread'
 import LiveChatWidget from './components/LiveChatWidget'
 import AuthPanel from './components/AuthPanel'
 import RealtimeFeedStatus from './components/RealtimeFeedStatus'
+import SmartFeedFilters from './components/SmartFeedFilters'
 import { reels } from './data/reels'
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
       <LiveChatWidget />
       <AuthPanel />
       <RealtimeFeedStatus />
+      <SmartFeedFilters />
 
       {reels.map((reel, index) => (
         <ReelCard key={index} reel={reel} />
